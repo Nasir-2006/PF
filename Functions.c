@@ -378,3 +378,85 @@
 //     return LCM(n1,n2);
     
 // }
+// #include<stdio.h>
+// int find(int);
+// int main()
+// {
+//     int num;
+//     printf("Enter num:");
+//     scanf("%d",&num);
+//     if(find(1))
+//     {
+//         printf("Num is even");
+//     }
+//     else
+//     {
+//         printf("Number is odd");
+//     }
+// }
+// int find(int num)
+// {
+//     if(num%2==0)
+//     return 1;
+//     else
+//     return 0;
+// }
+// #include<stdio.h>
+// int ser(int);
+// int main()
+// {
+//     int num;
+//     printf("Enter num:");
+//     scanf("%d",&num);
+//     printf("Sum is %d",ser(num));
+
+// }
+// int ser(int num)
+// {
+//     int sum=0;
+//     for(int i=1;i<=num;i++)
+//     {
+//        int fac=1;
+//        for(int j = 1;j<=i;j++)
+//        {
+//         fac = fac * j;
+//        }
+//        sum = sum + (fac/i);
+//     }
+// return sum;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int num,r,b=0,ba=1;
+//     scanf("%d",&num);
+//     while(num>0)
+//     {
+//         r=num%2;
+//         b=b+r*ba;
+//         num/=2;
+//         ba=ba*10;
+
+//     }
+//     printf("Binary is %d",b);
+// }
+// #include<stdio.h>
+// void sum(int);
+// int main()
+// {
+//     int num;
+//     printf("Enter num");
+//     scanf("%d",&num);
+//     sum(num);
+
+// }
+// void sum(int num)
+// {
+//     int s;
+//     if(num==0)
+//     return 0;
+//     else
+//   printf("%d\n",&num);
+//    sum(num-1);  
+    
+// }

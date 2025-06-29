@@ -203,25 +203,45 @@
 
 
 // }
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int num1, num2, a, b;
+// int main() {
+//     int num1, num2, a, b;
 
-    printf("Enter two numbers: ");
-    scanf("%d%d", &num1, &num2);
+//     printf("Enter two numbers: ");
+//     scanf("%d%d", &num1, &num2);
 
-    a = num1;
-    b = num2;
+//     a = num1;
+//     b = num2;
 
-    // Using the Euclidean algorithm to find HCF
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
+//     // Using the Euclidean algorithm to find HCF
+//     while (b != 0) {
+//         int temp = b;
+//         b = a % b;
+//         a = temp;
+//     }
 
-    printf("HCF of %d and %d is: %d\n", num1, num2, a);
+//     printf("HCF of %d and %d is: %d\n", num1, num2, a);
     
-    return 0;
-}
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int num,i=1,j=1;
+//     printf("Enter num:");
+//     scanf("%d",&num);
+//     while(i<=num)
+//     {
+//         int pri=0,count=1;
+//         while(count<=i)
+//         {
+//             if(i%count==0)
+//             pri++;
+//             count++;
+//         }
+//         if(pri==2)
+//         printf("%d ",i);
+//         i++;
+//     }
+// }
