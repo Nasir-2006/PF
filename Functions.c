@@ -460,3 +460,159 @@
 //    sum(num-1);  
     
 // }
+// #include<stdio.h>
+// void larg(int num);
+// int main()
+// {
+//     int num;
+//     printf("Enter number of elements:");
+//     scanf("%d",&num);
+//     larg(num);
+// }
+// void larg(int num)
+// {
+//     int arr[num];
+//     for (int i = 0; i < num; i++)
+//     {
+//         scanf("%d",&arr[i]);
+//     }
+//     for(int i=0;i<num;i++)
+//     {
+//         for(int j=i+1;j<num;j++)
+//         {
+//             if(arr[i]<arr[j])
+//             {
+//                 arr[i] = arr[i]+arr[j]-(arr[j]=arr[i]);
+//             }
+//         }
+//     }
+//         printf("largest is %d",arr[0]);
+// }
+// #include<stdio.h>
+// #include<math.h>
+// int arm(int);
+// int per(int);
+// int main()
+// {
+//     int num;
+//     printf("Enter num:");
+//     scanf("%d",&num);
+//     if(arm(num))
+//     {
+//         printf("\nis Armstrong");
+//     }
+//     else if(per(num))
+//     {
+//         printf("\nis perfect");
+//     }
+//     else 
+//     printf("\nNone of them!");
+// }
+// int arm(int num)
+// {
+//     int temp=0,count=0,sum=0;
+//     int w1= num;
+//     int orig = num;
+//     while(num!=0)
+//     {
+//         num/=10;
+//         count++;
+//     }
+//     while(w1!=0)
+//     {
+//         temp =w1%10;
+//         sum = sum + pow(temp,count);
+//         w1/=10;  
+//     }
+//     if(sum==orig)
+//     return 1;
+//     else 
+//     return 0;
+// }
+// int per(int num)
+// {
+//     int count=1,sum=0;
+//     int w1 = num;
+//     while(count<num)
+//     {
+//         if(num%count==0)
+//         {
+//             sum =sum+count;
+//         }
+//         count++;
+//     }
+//     if(sum==w1)
+//     return 1;
+//     else
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int i;
+//     printf("Enter Array elements:");
+//     scanf("%d",&i);
+//     int arr[i];
+//     for(int k=0;k<=i;k++)
+//     {
+//         scanf("%d",&arr[k]);
+//     }
+//     for(int j=i;j>=0;j--)
+//     {
+//         printf("%d",arr[j]);
+//     }
+
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int n,temp;
+//     printf("Enter Array elements:");
+//     scanf("%d",&n);
+//     int arr[n];
+//     for(int i=0;i<n;i++)
+//     {
+//         scanf("%d",&arr[i]);
+//     }
+//     for(int j=0;j<n;j++)
+//     {
+//         for(int k=j+1;k<n;k++)
+//         {
+//             if(arr[j]<arr[k])
+//             {
+//                 temp=arr[j];
+//                 arr[j]=arr[k];
+//                 arr[k]=temp;
+//             }
+//         }
+//     }
+//     for(int i=0;i<n;i++)
+//     {
+//         printf("%d",arr[i]);
+//     }
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int r,c;
+//     printf("Enter row and colums:");
+//     scanf("%d%d",&r,&c);
+//     int arr[r][c];
+//     for(int i=0;i<r;i++)
+//     {
+//         for(int j=0;j<c;j++)
+//         {
+//             scanf("%d",&arr[i][j]);
+//         }
+//     }
+//     printf("------------Transpose----------\n");
+//     for(int i=0;i<c;i++)
+//     {
+//         for(int j=0;j<r;j++)
+//         {
+//             printf("%d ", arr[j][i]);
+//         }
+//         printf("\n");
+//     }
+
+// }

@@ -643,120 +643,158 @@
 //     printf("Volume of Cylinder is %d",res);
 //     return res;
 // }
+// #include <stdio.h>
+// #define SMALL_SIZE 9
+// #define MEDIUM_SIZE 12
+// #define LARGE_SIZE 15
+// #define SMALL_PRICE 1.75f
+// #define MEDIUM_PRICE 1.90f
+// #define LARGE_PRICE 2.00f
+// void manual();
+// void sell(int *small, int *medium, int *large);
+// void cupsold(int small, int medium, int large);
+// void cofsold(int small, int medium, int large);
+// void money(int small, int medium, int large);
 
+// int main() {
+//     int choice;
+//     int smallCups = 0, mediumCups = 0, largeCups = 0;
 
+//     do {
+//         printf("\n\n----------Hello!----------");
+//         printf("\nWelcome to the Coffee Program :)");
+//         printf("\nChoose from the following:");
+//         printf("\n1 - Manual");
+//         printf("\n2 - Sell coffee");
+//         printf("\n3 - Show number of cups sold");
+//         printf("\n4 - Show amount of coffee sold");
+//         printf("\n5 - Show total money made");
+//         printf("\n6 - Exit");
+//         printf("\nEnter your choice: ");
+//         scanf("%d", &choice);
 
+//         switch(choice) {
+//             case 1: manual(); break;
+//             case 2: sell(&smallCups, &mediumCups, &largeCups); break;
+//             case 3: cupsold(smallCups, mediumCups, largeCups); break;
+//             case 4: cofsold(smallCups, mediumCups, largeCups); break;
+//             case 5: money(smallCups, mediumCups, largeCups); break;
+//             case 6: printf("Thank you for visiting!"); break;
+//             default: printf("Invalid choice! Try again."); break;
+//         }
+//     } while (choice != 6);
 
+//     return 0;
+// }
 
+// void manual() {
+//     printf("\n--------- Manual ---------");
+//     printf("\n1. You can buy coffee in 3 sizes: Small (9 oz), Medium (12 oz), and Large (15 oz).");
+//     printf("\n2. You can place multiple orders.");
+//     printf("\n3. You can view how many cups you've sold.");
+//     printf("\n4. You can check the total amount of coffee sold (in oz).");
+//     printf("\n5. You can also view the total money made from sales.");
+// }
 
+// void sell(int *small, int *medium, int *large) {
+//     int choice, cups;
 
+//     printf("\nWhich portion do you want?");
+//     printf("\n1 - Small ($1.75)\n2 - Medium ($1.90)\n3 - Large ($2.00)");
+//     printf("\nEnter your choice: ");
+//     scanf("%d", &choice);
 
-#include <stdio.h>
-#define SMALL_SIZE 9
-#define MEDIUM_SIZE 12
-#define LARGE_SIZE 15
-#define SMALL_PRICE 1.75f
-#define MEDIUM_PRICE 1.90f
-#define LARGE_PRICE 2.00f
-void manual();
-void sell(int *small, int *medium, int *large);
-void cupsold(int small, int medium, int large);
-void cofsold(int small, int medium, int large);
-void money(int small, int medium, int large);
+//     printf("How many cups? ");
+//     scanf("%d", &cups);
 
-int main() {
-    int choice;
-    int smallCups = 0, mediumCups = 0, largeCups = 0;
+//     switch(choice) {
+//         case 1:
+//             *small += cups;
+//             printf("Sold %d Small cup(s).\n", cups);
+//             printf("Amount of coffee: %d oz\n", cups * SMALL_SIZE);
+//             printf("Revenue: $%.2f\n", cups * SMALL_PRICE);
+//             break;
+//         case 2:
+//             *medium += cups;
+//             printf("Sold %d Medium cup(s).\n", cups);
+//             printf("Amount of coffee: %d oz\n", cups * MEDIUM_SIZE);
+//             printf("Revenue: $%.2f\n", cups * MEDIUM_PRICE);
+//             break;
+//         case 3:
+//             *large += cups;
+//             printf("Sold %d Large cup(s).\n", cups);
+//             printf("Amount of coffee: %d oz\n", cups * LARGE_SIZE);
+//             printf("Revenue: $%.2f\n", cups * LARGE_PRICE);
+//             break;
+//         default:
+//             printf("Invalid size selected.\n");
+//     }
+// }
 
-    do {
-        printf("\n\n----------Hello!----------");
-        printf("\nWelcome to the Coffee Program :)");
-        printf("\nChoose from the following:");
-        printf("\n1 - Manual");
-        printf("\n2 - Sell coffee");
-        printf("\n3 - Show number of cups sold");
-        printf("\n4 - Show amount of coffee sold");
-        printf("\n5 - Show total money made");
-        printf("\n6 - Exit");
-        printf("\nEnter your choice: ");
-        scanf("%d", &choice);
+// void cupsold(int small, int medium, int large) {
+//     printf("\nTotal cups sold:");
+//     printf("\nSmall: %d", small);
+//     printf("\nMedium: %d", medium);
+//     printf("\nLarge: %d", large);
+//     printf("\nTotal: %d", small + medium + large);
+// }
 
-        switch(choice) {
-            case 1: manual(); break;
-            case 2: sell(&smallCups, &mediumCups, &largeCups); break;
-            case 3: cupsold(smallCups, mediumCups, largeCups); break;
-            case 4: cofsold(smallCups, mediumCups, largeCups); break;
-            case 5: money(smallCups, mediumCups, largeCups); break;
-            case 6: printf("Thank you for visiting!"); break;
-            default: printf("Invalid choice! Try again."); break;
-        }
-    } while (choice != 6);
+// void cofsold(int small, int medium, int large) {
+//     int totalOunces = (small * SMALL_SIZE) + (medium * MEDIUM_SIZE) + (large * LARGE_SIZE);
+//     printf("\nTotal amount of coffee sold: %d oz", totalOunces);
+// }
 
-    return 0;
-}
-
-void manual() {
-    printf("\n--------- Manual ---------");
-    printf("\n1. You can buy coffee in 3 sizes: Small (9 oz), Medium (12 oz), and Large (15 oz).");
-    printf("\n2. You can place multiple orders.");
-    printf("\n3. You can view how many cups you've sold.");
-    printf("\n4. You can check the total amount of coffee sold (in oz).");
-    printf("\n5. You can also view the total money made from sales.");
-}
-
-void sell(int *small, int *medium, int *large) {
-    int choice, cups;
-
-    printf("\nWhich portion do you want?");
-    printf("\n1 - Small ($1.75)\n2 - Medium ($1.90)\n3 - Large ($2.00)");
-    printf("\nEnter your choice: ");
-    scanf("%d", &choice);
-
-    printf("How many cups? ");
-    scanf("%d", &cups);
-
-    switch(choice) {
-        case 1:
-            *small += cups;
-            printf("Sold %d Small cup(s).\n", cups);
-            printf("Amount of coffee: %d oz\n", cups * SMALL_SIZE);
-            printf("Revenue: $%.2f\n", cups * SMALL_PRICE);
-            break;
-        case 2:
-            *medium += cups;
-            printf("Sold %d Medium cup(s).\n", cups);
-            printf("Amount of coffee: %d oz\n", cups * MEDIUM_SIZE);
-            printf("Revenue: $%.2f\n", cups * MEDIUM_PRICE);
-            break;
-        case 3:
-            *large += cups;
-            printf("Sold %d Large cup(s).\n", cups);
-            printf("Amount of coffee: %d oz\n", cups * LARGE_SIZE);
-            printf("Revenue: $%.2f\n", cups * LARGE_PRICE);
-            break;
-        default:
-            printf("Invalid size selected.\n");
-    }
-}
-
-void cupsold(int small, int medium, int large) {
-    printf("\nTotal cups sold:");
-    printf("\nSmall: %d", small);
-    printf("\nMedium: %d", medium);
-    printf("\nLarge: %d", large);
-    printf("\nTotal: %d", small + medium + large);
-}
-
-void cofsold(int small, int medium, int large) {
-    int totalOunces = (small * SMALL_SIZE) + (medium * MEDIUM_SIZE) + (large * LARGE_SIZE);
-    printf("\nTotal amount of coffee sold: %d oz", totalOunces);
-}
-
-void money(int small, int medium, int large) {
-    float total = (small * SMALL_PRICE) + (medium * MEDIUM_PRICE) + (large * LARGE_PRICE);
-    printf("\nTotal revenue earned: $%.2f", total);
-}
-
+// void money(int small, int medium, int large) {
+//     float total = (small * SMALL_PRICE) + (medium * MEDIUM_PRICE) + (large * LARGE_PRICE);
+//     printf("\nTotal revenue earned: $%.2f", total);
+// }
+// #include<stdio.h>
+// void bin(int);
+// int main()
+// {
+//     int num;
+//     printf("Enter num:");
+//     scanf("%d",&num);
+//     bin(num);
+// }
+// void bin(int num)
+// { int rem,arr[100],i=0;
+//     while(num)
+//     {
+//         rem = num%2;
+//         num/=2;
+//         arr[i]=rem;
+//         i++;
+//     }
+//     for(int j=i-1;j>=0;j--)
+//     {
+//         printf("%d",arr[j]);
+//     }
+// }
+// #include<stdio.h>
+// void pri(int);
+// int main()
+// {
+// int num;
+// printf("Enter num:");
+// scanf("%d",&num);
+// pri(num);
+// }
+// void pri(int num)
+// { int count=1,pri=0;
+//     while(count<=num)
+//     {
+//         if(num%count==0)
+//         pri++;
+//         count++;
+//     }
+//     if(pri==2)
+//     {
+//         printf("%d  is prime",num);
+//     }
+//     else
+//     printf("%d is not prime",num);
+// }
 
 
 
