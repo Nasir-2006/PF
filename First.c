@@ -796,5 +796,13 @@
 //     printf("%d is not prime",num);
 // }
 
+#include<stdio.h>
+int main()
+{
+ float Temperature,K;
+ printf("Enter the temperature");
+ scanf("%f",&Temperature);  
+ K= Temperature+273.15;
+ printf("Temperature=%.2f",K ); 
 
-
+}
