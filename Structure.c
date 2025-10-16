@@ -103,7 +103,8 @@
 // }
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int day1, month1, day2, month2;
     int monthDays[] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
     int days = 0, i;
@@ -127,4 +128,4 @@ int main() {
 
     printf("Difference in days: %d\n", days);
     return 0;
-}
+}}
