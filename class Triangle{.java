@@ -44,7 +44,7 @@ class Triangle{
     {
         return LOS3;
     }
-    public void calTOT(float LOS1,float LOS2,float LOS3)
+    public void calTOT()
     {
        if (LOS1 == LOS2 && LOS2 == LOS3)
         {
@@ -57,12 +57,12 @@ class Triangle{
             TOT = "Scalene Triangle";
         } 
     }
-    public void calArea(float LOS1,float LOS2,float LOS3)
+    public void calArea()
     {
     float s = (LOS1 + LOS2 + LOS3) / 2;
     Area = (float) Math.sqrt(s * (s - LOS1) * (s - LOS2) * (s - LOS3));
     }
-    public void calPara(float LOS1,float LOS2,float LOS3)
+    public void calPara()
     {
         this.Perimeter = LOS1 + LOS2 + LOS3;
     }
@@ -82,10 +82,32 @@ public void display() {
         System.out.println("Side 2: " + this.LOS2);
         System.out.println("Side 3: " + this.LOS3);
         System.out.println("Perimeter: " + this.Perimeter);
-        System.out.println("Area: " + this.area)
-        System.out.println("Ty: " + Perimeter)
-    }
-public static void main(Stri)
+        System.out.println("Area: " + this.Area);
+        System.out.println("Type of triangle: " + this.TOT);
+        }
+}
+public class Main
+{
+public static void main(String[] arg)
+{
+        Triangle T1 = new Triangle(3, 3, 3);
+        Triangle T2 = new Triangle(4, 4, 5);
+        Triangle T3 = new Triangle(5, 6, 7);
+        T1.calTOT(); 
+        T1.calArea();
+        T1.calPara();
+        T2.calTOT();
+        T2.calArea(); 
+        T2.calPara();
+        T3.calTOT(); 
+        T3.calArea(); 
+        T3.calPara();
 
-
+        T1.display();
+        T2.display();
+        T3.display();
+        boolean sameType = Triangle.CT(T1, T2, T3);
+        System.out.println("Are all triangles the same type? " + sameType);
+    
+}
 }
